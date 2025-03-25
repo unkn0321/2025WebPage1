@@ -1,18 +1,45 @@
-.leftArea{
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    color: aliceblue;
-    background-image: url(https://thumb.ac-illust.com/64/64467c262ed143a6f32018fd810f5672_t.jpeg);
+/* margin是與外部元素的邊界距離 */
+/* padding是與內部元素的邊界距離 */
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  background-color: blueviolet;
+  padding: auto;
+  margin: auto;
 }
-.navigator{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.leftArea {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: rgba(8, 52, 250, 0.5);
+  overflow: hidden;
+  /* padding: auto;
+  margin: auto; */
 }
-
+.rightArea {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: rgba(230, 8, 250, 0.5);
+  overflow: hidden;
+  /* padding: auto;
+  margin: auto; */
+}
+.navigator {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+}
+.navigator a {
+  border-style: solid;
+  margin: 5px;
+}
 #avatar {
- width: 100px;
- height: 100px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
