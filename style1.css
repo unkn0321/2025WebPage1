@@ -11,8 +11,8 @@
 .leftArea {
   display: flex;
   flex-direction: column;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 500px;
   background-color: rgba(8, 52, 250, 0.5);
   overflow: hidden;
   /* padding: auto;
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   color: #fff;
-  align-items: center;
+  align-items: start;
 }
 .navigator a {
   border-style: solid;
