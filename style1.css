@@ -5,13 +5,12 @@
   flex-direction: row;
   border-radius: 5px;
   background-color: blueviolet;
-  padding: auto;
   margin: auto;
 }
 .leftArea {
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: 150px;
   height: 500px;
   background-color: rgba(8, 52, 250, 0.5);
   overflow: hidden;
@@ -25,8 +24,8 @@
   height: auto;
   background-color: rgba(230, 8, 250, 0.5);
   overflow: hidden;
-  /* padding: auto;
-  margin: auto; */
+  padding: auto;
+  margin: auto;
 }
 .navigator {
   display: flex;
@@ -42,4 +41,8 @@
   width: 100px;
   height: 100px;
   margin: 10px;
+  background-image: url("https://www.todayifoundout.com/wp-content/uploads/2017/11/rick-astley.png");
+  background-position: center;
+  background-size: 150%;
+  background-repeat: no-repeat;
 }
