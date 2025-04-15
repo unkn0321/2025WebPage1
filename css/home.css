@@ -1,0 +1,109 @@
+/* margin是與外部元素的邊界距離 */
+/* padding是與內部元素的邊界距離 */
+@media screen and (max-width: 1121.6px) {
+  .mainContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+  }
+  .leftArea {
+    width: 100% !important;
+  }
+  .rightArea {
+    width: 100% !important;
+    box-shadow: inset 0 10px 30px 0px rgba(25, 25, 26, 0.734) !important;
+  }
+}
+body {
+  min-height: 795.2px;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: rgba(8, 52, 250, 0.5);
+  overflow: hidden;
+  margin: 100px 200px 100px 200px;
+}
+.leftArea {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 500px;
+  background-blend-mode: multiply;
+  background-color: rgba(8, 26, 107, 0.99);
+  background-image: url("https://i0.wp.com/www.hcn.org/wp-content/uploads/2023/08/caves-feature-splash.jpg?fit=2000%2C1334&quality=100&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.rightArea {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 500px;
+  box-shadow: inset 10px 0 30px 0px rgba(25, 25, 26, 0.734);
+  background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/97979387_uJX3tHsEc75Hf1U.png?1743319101");
+  background-position: top;
+  min-width: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.navigator {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+
+.navigator a {
+  color: #fff;
+  text-decoration: none;
+  border-style: none;
+  margin: 10px 10px;
+  transition: transform 0.3s ease;
+}
+
+.navigator a:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 5px 5px #fff;
+}
+
+.navigator a:active {
+  color: rgba(152, 152, 242, 0.734);
+}
+
+.navigator a:checked {
+  color: aqua;
+}
+
+.subPages {
+  display: none;
+}
+
+.subPages:target {
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #fff;
+  display: block !important;
+}
+
+.home {
+  display: block;
+}
+
+.subPages:target {
+}
+
+#contact a {
+  color: #fff;
+}
+
+.line {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-left: 45px;
+  margin-right: 45px;
+}
