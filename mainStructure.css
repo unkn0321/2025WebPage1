@@ -30,7 +30,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 500px;
+  min-height: 500px;
   background-blend-mode:multiply;
   background-color: rgba(8, 26, 107, 0.99);
   background-image: url("https://i0.wp.com/www.hcn.org/wp-content/uploads/2023/08/caves-feature-splash.jpg?fit=2000%2C1334&quality=100&ssl=1");
@@ -42,7 +42,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 500px;
+  min-height: 500px;
   box-shadow:inset 10px 0 30px 0px rgba(25, 25, 26, 0.734);
   background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/97979387_uJX3tHsEc75Hf1U.png?1743319101");
   background-position: top;
@@ -58,7 +58,10 @@ body{
   justify-content:center;
   margin: 0 10px 0 10px;
 }
-.navigator a {
+
+.navigator a{
+  color: #fff;
+  text-decoration: none;
   border-style:none;
   margin: 10px 10px;
   transition: transform 0.3s ease;
@@ -73,8 +76,31 @@ body{
   color: rgba(152, 152, 242, 0.734);
 }
 
-.navigator a:current{
+.navigator a:checked{
   color: aqua;
+}
+
+.subPages {
+  display: none;
+}
+
+.subPages:target{
+  margin-left: 50px;
+  margin-right:50px;
+  color: #fff;
+  display:block !important;
+}
+
+.home{
+  display: block;
+}
+
+.subPages:target+.home{
+  display:none;
+}
+
+#contact a{
+  color:#fff;
 }
 
 .line{
