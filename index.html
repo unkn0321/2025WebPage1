@@ -6,49 +6,169 @@
     <link href="./css/home.css" rel="stylesheet" />
     <title>MYFILE</title>
   </head>
-  <body style="background-color: rgb(42, 42, 61)">
-
-    <div class="mainContainer">
-      <div class="leftArea">
-        <div style="margin-left: 50px; color: #fff">
-          <h1 style="margin-bottom: 0">路人</h1>
+  <body>
+    <div class="videoContainer">
+      <div class="renderLayer"></div>
+      <video src="./assets/home_BG.mp4" type="video/mp4" loop autoplay preload="auto" class="BGvideo">
+      </video>
+      <div class="mainContainer">
+        <div class="titleArea">
+          <h1>路人甲</h1>
+          <h4>路人甲的副標題</h4>
         </div>
         <hr class="line" />
-        <div class="navigator">
-          <a href="./subPages/intro.html">Intro</a>
-          <a href="./subPages/works.html">Works</a>
-          <a href="./subPages/contact.html">Contact</a>
-        </div>
-        <hr class="line" />
-        <div
-          class="home"
-          style="color: #fff; margin-left: 50px; margin-right: 50px"
-        >
-          <p>Hello</p>
-        </div>
-        <div id="intro" class="subPages">
-          <h1>我是路人</h1>
-        </div>
-        <div id="works" class="subPages">
-          <p>此處空空如也</p>
-        </div>
-        <div id="contact" class="subPages">
-          <ul>
-            <li>
-              <a href="https://www.instagram.com/nokinok_art/" target="_blank"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a href="https://www.facebook.com/no.ki.75491856/" target="_blank"
-                >Facebook</a
-              >
-            </li>
-          </ul>
+        <div class="navArea">
+          <a href="./intro.html">導覽1</a>
+          <a>導覽2</a>
+          <a>導覽3</a>
         </div>
       </div>
-      <div class="rightArea"></div>
+      <div class="mainContainerBG"></div>
     </div>
-    <video src="./assets/home_BG.mp4" type="video/mp4" loop autoplay>
   </body>
 </html>
+
+
+
+<!--
+【HTML】
+      <div class="mainContainer">
+        <div class="leftArea">
+          <div style="margin-left: 50px; color: #fff">
+            <h1 style="margin-bottom: 0">路人</h1>
+          </div>
+          <hr class="line" />
+          <div class="navigator">
+            <a href="./subPages/intro.html">Intro</a>
+            <a href="./subPages/works.html">Works</a>
+            <a href="./subPages/contact.html">Contact</a>
+          </div>
+          <hr class="line" />
+          <div
+            class="home"
+            style="color: #fff; margin-left: 50px; margin-right: 50px"
+          >
+            <p>Hello</p>
+          </div>
+          <div id="intro" class="subPages">
+            <h1>我是路人</h1>
+          </div>
+          <div id="works" class="subPages">
+            <p>此處空空如也</p>
+          </div>
+          <div id="contact" class="subPages">
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/nokinok_art/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/no.ki.75491856/" target="_blank"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="rightArea"></div>
+      </div>
+
+-->
+
+<!--
+【CSS】
+.mainContainer {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: rgba(8, 52, 250, 0.5);
+  overflow: hidden;
+  margin: 100px 200px 100px 200px;
+}
+.leftArea {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 500px;
+  background-blend-mode: multiply;
+  background-color: rgba(8, 26, 107, 0.99);
+  background-image: url("https://i0.wp.com/www.hcn.org/wp-content/uploads/2023/08/caves-feature-splash.jpg?fit=2000%2C1334&quality=100&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.rightArea {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 500px;
+  box-shadow: inset 10px 0 30px 0px rgba(25, 25, 26, 0.734);
+  background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/97979387_uJX3tHsEc75Hf1U.png?1743319101");
+  background-position: top;
+  min-width: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.navigator {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+
+.navigator a {
+  color: #fff;
+  text-decoration: none;
+  border-style: none;
+  margin: 10px 10px;
+  transition: transform 0.3s ease;
+}
+
+.navigator a:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 5px 5px #fff;
+}
+
+.navigator a:active {
+  color: rgba(152, 152, 242, 0.734);
+}
+
+.navigator a:checked {
+  color: aqua;
+}
+
+.subPages {
+  display: none;
+}
+
+.subPages:target {
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #fff;
+  display: block !important;
+}
+
+.home {
+  display: block;
+}
+
+.subPages:target {
+}
+
+#contact a {
+  color: #fff;
+}
+
+.line {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+
+-->
