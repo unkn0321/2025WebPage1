@@ -1,32 +1,119 @@
 /* margin是與外部元素的邊界距離 */
 /* padding是與內部元素的邊界距離 */
-@media screen and (max-width: 1121.6px) {
+/*'Noto Serif TC', serif*/@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+/*'Klee One', cursive*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&display=swap');
+/*'Zen Maru Gothic', sans-serif*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap');
+@media (max-width: 768px) {
   .mainContainer {
-    display: flex !important;
     flex-direction: column !important;
-    margin-left: 50px !important;
-    margin-right: 50px !important;
+    width: 60% !important;
+    min-width: 400px !important;
   }
   .leftArea {
     width: 100% !important;
+    min-height: 300px;
   }
   .rightArea {
     width: 100% !important;
-    box-shadow: inset 0 10px 30px 0px rgba(25, 25, 26, 0.734) !important;
+    min-height: 300px;
+  }
+  .BGcontainer, .renderLayer{
+    min-height: 2000px !important;
   }
 }
 body {
-  min-height: 795.2px;
+  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow:auto;
 }
+/*導覽列【圖層高度：10】*/
+.navigator {
+  position: sticky;
+  z-index: 10;
+  top:0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  color: #affcff;
+  align-self: start;
+  align-items: center;
+  justify-content: space-between;
+  background:linear-gradient(180deg,
+  rgb(28, 28, 37),
+  rgb(32, 22, 82),
+  rgba(32, 22, 82),
+  rgb(35, 33, 92),
+  rgba(31, 50, 121, 0.8));
+  box-shadow: 
+  0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.navTitle{
+  font-family: 'Noto Serif TC', serif;
+  text-align: center;
+  margin: 0 0 0 20px;
+  text-shadow:
+  0 0 5px aqua;
+}
+.navArea{
+  min-width: 50%;
+  display: flex;
+  justify-content:end;
+}
+.navArea a{
+  text-decoration: none;
+  color: #affcff;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-shadow:
+  0 0 5px aqua;
+  transition: text-shadow 0.25s linear,
+              transform 0.25s linear;
+}
+.navArea a:hover{
+  color:#affcff;
+  text-decoration: none;
+  text-shadow: 
+  0 0 2px #affcff,
+  5px 5px 10px #2f25fa,
+  5px 5px 10px #2f25fa,
+  -5px -5px 10px #2f25fa,
+  -5px -5px 10px #2f25fa,
+  -5px 5px 10px #2f25fa,
+  -5px 5px 10px #2f25fa,
+  5px -5px 10px #2f25fa,
+  5px -5px 10px #2f25fa;
+  mix-blend-mode: overlay;
+  transform: translateY(-5px);
+}
+.navArea a:active{
+  color: #2f25fa;
+  text-shadow: 
+  0 0 2px #2f25fa,
+  5px 5px 10px #affcff,
+  -5px -5px 10px #affcff,
+  -5px 5px 10px #affcff,
+  5px -5px 10px #affcff;
+  transform: translateY(-1px);
+}
+
+/*------------------------------------------------------*/
+
+/*頁面主要內容【圖層高度：1】*/
 .mainContainer {
   position: absolute;
   z-index: 1;
+  width: 90%;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  margin-top: 100px;
+  justify-content: center;
+  align-self: start;
   flex-direction: row;
   border-radius: 10px;
   background-color: rgba(8, 52, 250, 0.5);
@@ -44,6 +131,20 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+.titleDiv {
+  display: flex;
+  justify-self: start;
+  padding: 20px;
+}
+.title{
+  font-size: 60px;
+  font-family: 'Noto Serif TC', serif;
+  text-align: center;
+  margin: 0 0 0 0;
+  color: #affcff;
+  text-shadow:
+  0 0 5px aqua;
+}
 .rightArea {
   display: flex;
   flex-direction: column;
@@ -57,59 +158,50 @@ body {
   background-repeat: no-repeat;
   overflow: hidden;
 }
-.navigator {
+
+/*-----------------------------------------------------------*/
+
+/*背景內容濾鏡【圖層高度：-3】*/
+.renderLayer{
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  background:linear-gradient(180deg,
+    rgb(28, 28, 37),
+    rgb(32, 22, 82),
+    rgba(32, 22, 82),
+    rgb(35, 33, 92),
+    rgba(31, 50, 121, 0.8));
+  mix-blend-mode:hue;
+}
+
+/*背景內容【圖層高度：-4】*/
+.BGvideo {
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -4;
+  object-fit: cover;
+  filter: 
+  brightness(0.5)
+  contrast(2);
+}
+
+/*背景內容容器【圖層高度：-5】*/
+.BGcontainer {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  color: #fff;
   justify-content: center;
-  margin: 0 10px 0 10px;
+  align-items: center;
 }
 
-.navigator a {
-  color: #fff;
-  text-decoration: none;
-  border-style: none;
-  margin: 10px 10px;
-  transition: transform 0.3s ease;
-}
-
-.navigator a:hover {
-  transform: translateY(-5px);
-  text-shadow: 0 5px 5px #fff;
-}
-
-.navigator a:active {
-  color: rgba(152, 152, 242, 0.734);
-}
-
-.navigator a:checked {
-  color: aqua;
-}
-
-.subPages {
-  display: none;
-}
-
-.subPages:target {
-  margin-left: 50px;
-  margin-right: 50px;
-  color: #fff;
-  display: block !important;
-}
-
-.home {
-  display: block;
-}
-
-.subPages:target {
-}
-
-#contact a {
-  color: #fff;
-}
-
-.line {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  margin-left: 45px;
-  margin-right: 45px;
-}

@@ -7,16 +7,27 @@
     <title>MYFILE-Intro</title>
 </head>
 <body>
+  <div class="BGcontainer">
+    <div class="renderLayer"></div>
+    <video autoplay muted loop class="BGvideo">
+        <source src="./assets/intro_BG.mp4" type="video/mp4" />
+    </video>
+    <div class="navigator">
+      <div class="navTitle">
+        <h2>路人甲</h2>
+      </div>
+      <div class="navArea">
+        <a href="./index.html">Home</a>
+        <a href="./works.html">Works</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="navRenderLayer">  
+    </div>
     <div class="mainContainer">
         <div class="leftArea">
-          <div style="margin-left: 50px; color: #fff">
-            <h1 style="margin-bottom: 0">路人</h1>
-          </div>
-          <hr class="line" />
-          <div class="navigator">
-            <a href="./subPages/intro.html">Intro</a>
-            <a href="./subPages/works.html">Works</a>
-            <a href="./subPages/contact.html">Contact</a>
+          <div class="titleDiv">
+            <h1 class="title">路人甲</h1>
           </div>
           <hr class="line" />
           <div
@@ -48,5 +59,6 @@
         </div>
         <div class="rightArea"></div>
     </div>
+  </div>
 </body>
 </html>
