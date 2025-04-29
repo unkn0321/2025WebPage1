@@ -3,21 +3,21 @@
 /*'Noto Serif TC', serif*/@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
 /*'Klee One', cursive*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&display=swap');
 /*'Zen Maru Gothic', sans-serif*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap');
-@media screen and(max-width: 768px) {
-  .mainContainer {
+@media screen and (max-width: 768px) {
+  body .mainContainer {
     flex-direction: column;
     width: 60% ;
     min-width: 400px ;
   }
-  .leftArea {
+  .BGcontainer .leftArea {
     width: 100% ;
     min-height: 300px;
   }
-  .rightArea {
+  .mainContainer .rightArea {
     width: 100%;
     min-height: 300px;
   }
-  .BGcontainer, .renderLayer{
+  body .BGcontainer, body .renderLayer {
     min-height: 100vh ;
   }
 }
