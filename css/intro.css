@@ -44,7 +44,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background:linear-gradient(180deg,
-  rgb(28, 28, 37),
+  rgb(29, 21, 67),
   rgb(32, 22, 82),
   rgba(32, 22, 82),
   rgb(35, 33, 92),
@@ -89,7 +89,6 @@ body {
   -5px 5px 10px #2f25fa,
   5px -5px 10px #2f25fa,
   5px -5px 10px #2f25fa;
-  mix-blend-mode: overlay;
   transform: translateY(-5px);
 }
 .navArea a:active{
@@ -100,7 +99,7 @@ body {
   -5px -5px 10px #affcff,
   -5px 5px 10px #affcff,
   5px -5px 10px #affcff;
-  transform: translateY(-1px);
+  transform: translateY(1px);
 }
 
 /*------------------------------------------------------*/
@@ -109,7 +108,7 @@ body {
 .mainContainer {
   position: absolute;
   z-index: 1;
-  width: 90%;
+  width: 80%;
   display: flex;
   margin-top: 100px;
   justify-content: center;
@@ -123,6 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding: 25px;
   min-height: 500px;
   background-blend-mode: multiply;
   background-color: rgba(8, 26, 107, 0.99);
@@ -134,7 +134,6 @@ body {
 .titleDiv {
   display: flex;
   justify-self: start;
-  padding: 20px;
 }
 .title{
   font-size: 60px;
@@ -144,6 +143,22 @@ body {
   color: #affcff;
   text-shadow:
   0 0 5px aqua;
+}
+.line{
+  width: 100%;
+  border: 1px solid #affcff;
+  animation: fadeIn 1s linear both;
+}
+@keyframes fadeIn {
+  
+  0% {
+    opacity: 0%;
+    width: 0%;
+  }
+  100% {
+    opacity: 100%;
+    width: 100%;
+  }
 }
 .rightArea {
   display: flex;
