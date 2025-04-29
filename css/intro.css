@@ -147,17 +147,25 @@ body {
 .line{
   width: 100%;
   border: 1px solid #affcff;
-  animation: fadeIn 1s linear both;
+  animation: fadeIn 1.5s linear 0.25s both;
 }
 @keyframes fadeIn {
-  
   0% {
     opacity: 0%;
     width: 0%;
+    margin-right: 100%;
+  }
+  10%{
+    width: 0%;
+    margin-right: 100%;
+  }
+  50%{
+    opacity: 100%;
   }
   100% {
     opacity: 100%;
     width: 100%;
+    margin-right: 0%;
   }
 }
 .rightArea {
