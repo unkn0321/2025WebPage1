@@ -3,24 +3,7 @@
 /*'Noto Serif TC', serif*/@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
 /*'Klee One', cursive*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&display=swap');
 /*'Zen Maru Gothic', sans-serif*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap');
-@media (max-width: 768px) {
-  .mainContainer {
-    flex-direction: column !important;
-    width: 60% !important;
-    min-width: 400px !important;
-  }
-  .leftArea {
-    width: 100% !important;
-    min-height: 300px;
-  }
-  .rightArea {
-    width: 100% !important;
-    min-height: 300px;
-  }
-  .BGcontainer, .renderLayer{
-    min-height: 2000px !important;
-  }
-}
+
 body {
   min-height: auto;
   display: flex;
@@ -168,6 +151,28 @@ body {
     margin-right: 0%;
   }
 }
+.content{
+  color: #affcff;
+}
+.contentTitle h2{
+  font-size: 1.5em;
+  font-family: 'Klee One', cursive;
+  margin: 0 0 0 0;
+  color: #affcff;
+  text-shadow:
+  0 0 3px aqua;
+}
+.contentText{  
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.contentText ul{
+  font-size: 1em;
+  margin: 0 0 0 0;
+  color: #affcff;
+}
+.contentText ul ul{
+  list-style-type: none;
+}
 .rightArea {
   display: flex;
   flex-direction: column;
@@ -228,3 +233,23 @@ body {
   align-items: center;
 }
 
+/*RWD*/
+/*!!!要放最尾才會正常作用!!!*/
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column ;
+    width: 60% ;
+    min-width: 400px;
+  }
+  .leftArea {
+    width: 88% ;
+    min-height: 300px;
+  }
+  .rightArea {
+    width: 100%;
+    min-height: 300px;
+  }
+  .BGcontainer, .renderLayer{
+    min-height: 2000px;
+  }
+}
