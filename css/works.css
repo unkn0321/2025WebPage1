@@ -232,6 +232,7 @@ body {
   .colorPalette div{
     height: 1em;
     width: 100%;
+    margin-bottom:0.1em ;
     transition: height 0.25s linear;
   }
   .colorPalette div:hover{
@@ -248,7 +249,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    content: "用於嗚呼哈哈";
+    content: attr(id);
     font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 1em;
     color: #6176ff;
@@ -306,7 +307,7 @@ body {
   /*背景內容【圖層高度：-4】*/
   .BGvideo {
     position:absolute;
-    height: 100%;
+    height: 150vh;
     width: 100%;
     z-index: -4;
     object-fit: cover;
@@ -334,21 +335,22 @@ body {
     .mainContainer {
       flex-direction: column ;
       width: 60% ;
+      height: auto;
       min-width: 400px;
       padding: 0;
-      animation: load 1s linear both;
+      animation: load 1s linear none;
     }
     @keyframes load {
       0%{
         height: 0%;
       }
       100%{
-        height: 1010px;
+        height: 80%;
       }
     }
     .leftArea {
       width: 88% ;
-      min-height: 300px;
+      height: 1050px;
       animation: PreLrwd 1s linear 2s both;
     } 
     @keyframes PreLrwd {
@@ -361,7 +363,7 @@ body {
     }
     .rightArea {
       width: 100%;
-      min-height: 300px;
+      height: 500px;
       animation: PreRrwd 1s linear 2s both;
     } 
     @keyframes PreRrwd {
@@ -372,8 +374,11 @@ body {
         width: 100%;
       }
     }
+    .BGvideo{
+        transform: scaleY(1.66);
+    }
     .BGcontainer, .renderLayer{
-      min-height: 1200px;
+      min-height: 1800px;
     }
   }
   
