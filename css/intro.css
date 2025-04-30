@@ -312,7 +312,7 @@ body {
       height: 0%;
     }
     100%{
-      height: 780px;
+      height: 1010px;
     }
   }
   .leftArea {
@@ -342,6 +342,6 @@ body {
     }
   }
   .BGcontainer, .renderLayer{
-    min-height: 900px;
+    min-height: 1200px;
   }
 }
