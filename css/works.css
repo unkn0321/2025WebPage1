@@ -225,6 +225,40 @@ body {
     margin: 0 0 0 0;
     color: #affcff;
   }
+  .colorPalette{
+    display: flex;
+    flex-direction: column;
+  }
+  .colorPalette div{
+    height: 1em;
+    width: 100%;
+    transition: height 0.25s linear;
+  }
+  .colorPalette div:hover{
+    height: 2.5em;
+  }
+  .colorPalette div::before{
+    content: none;
+  }
+  .colorPalette div::after{
+    content: none;
+  }
+  .colorPalette div:hover::after{
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "用於嗚呼哈哈";
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1em;
+    color: #6176ff;
+    text-shadow:
+    0 0 5px #6176ff,
+    0 0 2px #6176ff,
+    0 0 2px #6176ff,
+    0 0 2px #6176ff;
+    margin-left: 1em;
+  }
   
   .rightArea {
     display: flex;
