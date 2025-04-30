@@ -100,6 +100,17 @@ body {
   border-radius: 10px;
   background-color: rgba(8, 52, 250, 0.5);
   overflow: hidden;
+  animation: Pre 1s linear both; 
+} 
+@keyframes Pre {
+  0% {
+    opacity: 0%;
+    width: 0%;
+  }
+  100% {
+    opacity: 100%;
+    width: 80%;
+  }
 }
 .leftArea {
   display: flex;
@@ -113,24 +124,44 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  animation: PreL 1s linear 1s both;
+}
+@keyframes PreL {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 50%;
+  }
 }
 .titleDiv {
   display: flex;
   justify-self: start;
 }
 .title{
-  font-size: 60px;
+  font-size: 3rem;
   font-family: 'Noto Serif TC', serif;
   text-align: center;
   margin: 0 0 0 0;
   color: #affcff;
   text-shadow:
   0 0 5px aqua;
+  animation: fadeInTitle 0.5s linear 2.75s both;
+}
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0%;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
 }
 .line{
   width: 100%;
   border: 1px solid #affcff;
-  animation: fadeIn 1.5s linear 0.25s both;
+  animation: fadeIn 1.5s linear 1.25s both;
 }
 @keyframes fadeIn {
   0% {
@@ -153,6 +184,25 @@ body {
 }
 .content{
   color: #affcff;
+  animation: fadeInContent 0.8s linear 3.25s both;
+}
+@keyframes fadeInContent {
+  0% {
+    opacity: 0%;
+    transform: translateY(-40%);
+  }
+  75%{
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+.line{
+  width: 100%;
+  border: 1px solid #affcff;
+  animation: fadeIn 1.5s linear 1.25s both;
 }
 .contentTitle h2{
   font-size: 1.5em;
@@ -162,10 +212,15 @@ body {
   text-shadow:
   0 0 3px aqua;
 }
-.contentText{  
+.contentText{
+  margin-bottom: 1.5rem;
+}
+.contentText p{  
   font-family: 'Zen Maru Gothic', sans-serif;
+  margin: 0 0 0 0;
 }
 .contentText ul{
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 1em;
   margin: 0 0 0 0;
   color: #affcff;
@@ -173,10 +228,10 @@ body {
 .contentText ul ul{
   list-style-type: none;
 }
+
 .rightArea {
   display: flex;
   flex-direction: column;
-  width: 50%;
   min-height: 500px;
   box-shadow: inset 10px 0 30px 0px rgba(25, 25, 26, 0.734);
   background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/97979387_uJX3tHsEc75Hf1U.png?1743319101");
@@ -185,8 +240,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  animation: PreR 1s linear 1s both;
 }
-
+@keyframes PreR {
+  0% {
+    min-width: 0;
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
 /*-----------------------------------------------------------*/
 
 /*背景內容濾鏡【圖層高度：-3】*/
@@ -235,21 +299,49 @@ body {
 
 /*RWD*/
 /*!!!要放最尾才會正常作用!!!*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 684px) {
   .mainContainer {
     flex-direction: column ;
     width: 60% ;
     min-width: 400px;
+    padding: 0;
+    animation: load 1s linear both;
+  }
+  @keyframes load {
+    0%{
+      height: 0%;
+    }
+    100%{
+      height: 780px;
+    }
   }
   .leftArea {
     width: 88% ;
     min-height: 300px;
+    animation: PreLrwd 1s linear 2s both;
+  } 
+  @keyframes PreLrwd {
+    0% {
+      width: 88%;
+    }
+    100% {
+      width: 88%;
+    }
   }
   .rightArea {
     width: 100%;
     min-height: 300px;
+    animation: PreRrwd 1s linear 2s both;
+  } 
+  @keyframes PreRrwd {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
   }
   .BGcontainer, .renderLayer{
-    min-height: 2000px;
+    min-height: 900px;
   }
 }
