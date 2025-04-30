@@ -130,7 +130,7 @@ body {
   animation: fadeIn 1s linear 0.5s backwards;
 }
 .titleArea h1{
-  font-size: 70px;
+  font-size: 4em;
   font-family: 'Noto Serif TC', serif;
   text-align: center;
   margin: 0 0 0 0;
@@ -139,7 +139,7 @@ body {
   animation: titleMove 1s linear 0.5s backwards;
 }
 .titleArea h4{
-  font-size: 25px;
+  font-size: 1.5em;
   color: rgba(0, 255, 255, 0.604);
   filter: blur(1px);
   font-family: 'Klee One', cursive;
@@ -169,7 +169,8 @@ body {
   text-decoration: none;
   color: #affcff;
   font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 1.35em;
   padding-left: 2%;
   padding-right: 2%;
   border-radius: 10px;
